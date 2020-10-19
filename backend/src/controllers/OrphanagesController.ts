@@ -39,6 +39,8 @@ export default{
             opening_hours,
             open_on_weekends,
         } = request.body;
+
+        
     
         const orphanagesRepository = getRepository(Orphanage);
 
@@ -55,8 +57,10 @@ export default{
             instructions,
             opening_hours,
             open_on_weekends,
-            images
+            images,
         }
+
+        console.log(data)
 
         const schema = Yup.object().shape({
             name: Yup.string().required(),
